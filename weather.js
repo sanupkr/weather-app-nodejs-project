@@ -6,6 +6,10 @@ const https = require("https");
 
 const body_parser = require("body-parser");
 
+var intro = "Weather Application";
+
+app.set('view engine','ejs');
+app.use(express.static("public"));
 app.use(body_parser.urlencoded({extended:true}));
 
 app.listen(3000,function(){
@@ -13,7 +17,7 @@ app.listen(3000,function(){
 });
 
 app.get("/",function(req,res){
-  res.sendfile(__dirname+"/index.html");
+  res.render("home",{intro:intro});
 });
 
 
@@ -29,11 +33,17 @@ app.post("/",function(req,res){
 
        const weather_info = JSON.parse(data);
        const image_url = "https:openweathermap.org/img/wn/" + weather_info.weather[0].icon +"@2x.png"
-      res.write("<h1>temperature in " + city +  " is "+weather_info.main.temp + " degree celsius</h1>");
-      res.write("<img src=" + image_url + ">")
-       res.send();
+      var info = "Temperature in " + city +  " is "+weather_info.main.temp + " degree celsius";
+
+
+       res.render("content",{intro:info,image:image_url});
      });
 
   });
 
+});
+
+
+app.post("/home",function(req,res){
+  res.redirect("/");
 });

@@ -1,0 +1,62 @@
+body{
+  background-image: url("/images/weather.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+.navbar{
+  padding:3%;
+}
+
+.nav-item-text{
+  color:white;
+}
+
+.input-text{
+  border-radius: 2%;
+  margin-bottom: 2%;
+}
+
+#project_head{
+  font-size: 4rem;
+  padding-top: 7%;
+}
+
+
+.content{
+  font-size: 2rem;
+  padding-top: 7%;
+}
+
+
+#go_back{
+  margin-top: 5%;
+  margin-bottom: 1%;
+}
+
+.footer-box{
+  margin-top:13%;
+  background-color: black;
+  color:white;
+}
+
+
+
+.footer-text{
+  padding:1%;
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+
+#home{
+  margin-right: 5%;
+  font-size: 1.5rem;
+
+}
+
+#about{
+  margin-right: 5%;
+  font-size: 1.5rem;
+
+}
