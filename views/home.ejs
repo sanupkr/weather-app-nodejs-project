@@ -7,11 +7,39 @@
 
       <div class="container content">
         <label>City:</label>
-        <input type="text" name="city_name" class="input-text" placeholder="Enter Your city">
+        <input type="text" name="city_name" class="input-text" placeholder="Enter Your city" autocomplete="off">
         <br>
         <button type="submit" name="button" class="btn btn-lg btn-dark">submit</button>
       </div>
 
     </form>
+
+    <div class="container city_name">
+      <div class="row">
+        <%for(var i=0;i<city_name.length;i++){%>
+          <%if(i>=city_name.length-4){%>
+              <div class="col-md-3">
+            <form class="" action="/delete" method="post">
+
+                <div class="card border-secondary bg-transparent">
+                  <div class="card-header">
+                    <%=city_name[i].name%>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title"><%=city_name[i].temp%> °C</h3>
+                    <p class="card-text"><%=city_name[i].desc%></p>
+                  </div>
+                  <div class="card-body">
+                    <button type="submit" class="btn btn-sm" value="<%=city_name[i]._id%>" name="remove"><strong>Remove</strong></button>
+                  </div>
+                </div>
+
+            </form>
+            </div>
+      <%}%>
+        <%}%>
+      </div>
+
+    </div>
 
 <%- include("partials/footer"); -%>
