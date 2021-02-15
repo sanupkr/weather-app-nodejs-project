@@ -1,1 +1,1 @@
-web: weather.js
+web: node weather.js
