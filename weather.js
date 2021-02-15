@@ -24,7 +24,7 @@ app.set('view engine','ejs');
 app.use(express.static("public"));
 app.use(body_parser.urlencoded({extended:true}));
 
-const port = process.env.Port || 3000;
+const port = process.env.PORT || 3000;
 
 app.listen(port);
 
