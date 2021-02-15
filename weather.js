@@ -7,7 +7,7 @@ const https = require("https");
 const body_parser = require("body-parser");
 
 const mongoose = require("mongoose");
-mongoose.connect("mongodb+srv://sanupkumar:test123>@cluster0.q5vfn.mongodb.net/weather_db",{useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect("mongodb+srv://sanupkumar:test123@cluster0.q5vfn.mongodb.net/weather_db",{useNewUrlParser: true, useUnifiedTopology: true});
 const intro = "Weather Application";
 const about_data = "This is Sanup kumar,I am a Computer Science student of Birla Institute Of Technology, Mesra,and this weather app project is an effort to try and create an api related application";
 
