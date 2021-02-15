@@ -7,7 +7,7 @@ const https = require("https");
 const body_parser = require("body-parser");
 
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/weather_db",{useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect("mongodb+srv://sanupkumar:test123>@cluster0.q5vfn.mongodb.net/weather_db",{useNewUrlParser: true, useUnifiedTopology: true});
 const intro = "Weather Application";
 const about_data = "This is Sanup kumar,I am a Computer Science student of Birla Institute Of Technology, Mesra,and this weather app project is an effort to try and create an api related application";
 
@@ -24,9 +24,9 @@ app.set('view engine','ejs');
 app.use(express.static("public"));
 app.use(body_parser.urlencoded({extended:true}));
 
-app.listen(3000,function(){
-  console.log("server is running on port 3000");
-});
+const port = process.env.Port || 3000;
+
+app.listen(port);
 
 app.get("/",function(req,res){
 
@@ -51,7 +51,7 @@ app.get("/",function(req,res){
               if(err){
                 console.log("error occured");
               }
-            
+
             });
           });
         });

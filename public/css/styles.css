@@ -2,6 +2,7 @@ body{
   background-image: url("/images/weather.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: auto;
   text-align: center;
 }
 
@@ -89,4 +90,8 @@ body{
   font-size: 1.5rem;
   margin-bottom: 0;
   padding-bottom: 0;
+}
+
+.text_author{
+  padding-bottom: 6%;
 }
