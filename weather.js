@@ -24,9 +24,17 @@ app.set('view engine','ejs');
 app.use(express.static("public"));
 app.use(body_parser.urlencoded({extended:true}));
 
-const port = process.env.PORT || 3000;
 
-app.listen(port);
+
+app.listen(process.env.PORT,function(err){
+  if(err)
+  {
+    console.log("error");
+  }
+  else{
+    console.log("success");
+  }
+});
 
 app.get("/",function(req,res){
 
