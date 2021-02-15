@@ -26,7 +26,7 @@ app.use(body_parser.urlencoded({extended:true}));
 
 
 
-app.listen(process.env.PORT,function(err){
+app.listen(3000||process.env.PORT,function(err){
   if(err)
   {
     console.log("error");
